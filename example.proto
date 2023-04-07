@@ -1,0 +1,17 @@
+syntax = "proto3";
+package example;
+option go_package = "./;examplepb";
+
+message Address {
+    string city = 1;
+    string state = 2;
+}
+
+message User {
+    string id = 1 ;
+    string name = 2;
+    int32 age = 3;
+    Address address = 4;
+    map<int32,Address> addressMap = 5;
+    repeated Address addressList = 6;
+}
